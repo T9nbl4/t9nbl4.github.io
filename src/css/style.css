@@ -1,29 +1,141 @@
-body{
+body {
     font-family: Arial, sans-serif;
 }
+
+/*-----------------------------------PRELOADER-------------------------------------*/
+.preloader {
+    position: fixed;
+    z-index: 1;
+    background: #ebe7ed;
+    -webkit-animation: load 3s 1;
+    -o-animation: load 3s 1;
+    animation: load 3s 1;
+    opacity: 0;
+}
+
+@keyframes load {
+
+    0%,
+    90% {
+        opacity: 1;
+        width: 100%;
+        height: 100%;
+    }
+
+    99% {
+        opacity: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    100% {
+        width: 0%;
+        height: 0%;
+    }
+}
+
+.lds-facebook {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+}
+
+.lds-facebook div {
+    display: inline-block;
+    position: fixed;
+    left: 8px;
+    width: 16px;
+    background: #eb7800;
+    box-shadow: 2px 2px 3px black;
+    animation: lds-facebook 1.2s cubic-bezier(0, 0.5, 0.5, 1) 3;
+    -webkit-animation: lds-facebook 1.2s cubic-bezier(0, 0.5, 0.5, 1) 3;
+    -o-animation: lds-facebook 1.2s cubic-bezier(0, 0.5, 0.5, 1) 3;
+    margin: 400px 900px;
+}
+
+.lds-facebook div:nth-child(1) {
+    left: 8px;
+    animation-delay: -0.24s;
+}
+
+.lds-facebook div:nth-child(2) {
+    left: 32px;
+    animation-delay: -0.12s;
+}
+
+.lds-facebook div:nth-child(3) {
+    left: 56px;
+    animation-delay: 0;
+}
+
+@keyframes lds-facebook {
+    0% {
+        top: 8px;
+        height: 64px;
+    }
+
+    50%,
+    100% {
+        top: 24px;
+        height: 32px;
+    }
+}
+
 /*-----------------------------MAIN--------------------------------*/
-nav{
+nav {
+    position: fixed;
     width: 100%;
     height: 60px;
     background-color: #14283a;
 }
 
-.logo{
+.logo {
+    padding-left: 390px;
+}
+
+.logo a {
+    position: relative;
     color: white;
     font-size: 24px;
     line-height: 60px;
-    padding-left: 390px;
     float: left;
+    transition: all 0.3s;
 }
 
-.menu{
+
+.logo a::before {
+    position: absolute;
+    bottom: 0;
+    content: "";
+    display: block;
+    width: 0%;
+    height: 3px;
+    background: #f57d00;
+    transition: all 0.3s;
+}
+
+.logo a:hover::before {
+    width: 100%;
+}
+
+.logo a:hover {
+    color: #f57d00;
+}
+
+/*.logo a:active {
+    transform: scale(1.1)
+}
+*/
+
+.menu {
     float: left;
     padding-left: 430px;
 }
 
-.menu li{
+.menu li {
     float: left;
-    color: white;
+    color: #fff;
     font-size: 14px;
     line-height: 60px;
     margin-right: 40px;
@@ -31,32 +143,90 @@ nav{
     font-weight: bold;
 }
 
-.main{
-    width: 100%;
-    height: calc(100% - 60px);
-    background: url(../img/guy.png) 90% 100%/auto 85% no-repeat ,url(../img/bg.jpg) center/cover, no-repeat ;
+.menu li a {
+    transition: all 0.3s;
+    display: inline-block;
+    color: #fff;
+    position: relative;
 }
 
-.title_container{
+.menu li a::before {
+    position: absolute;
+    bottom: 0;
+    content: "";
+    display: block;
+    width: 0%;
+    height: 3px;
+    background: #f57d00;
+    transition: all 0.3s;
+}
+
+.menu li a:hover::before {
+    width: 100%;
+}
+
+.menu li a:visited {
+    color: #fff;
+}
+
+.menu li a:hover {
+    color: #f57d00;
+}
+
+/*.menu li a:active {
+    transform: scale(1.1)
+}
+*/
+
+main {
+    width: 100%;
+    height: 100%;
+}
+
+.main {
+    width: 100%;
+    height: 100%;
+    background: url(../img/guy.png) 90% 100%/auto 85% no-repeat, url(../img/bg.jpg) center/cover, no-repeat;
+    position: inherit;
+}
+
+.title_container {
+    position: inherit;
     float: left;
     margin: 432px 0px 0px 404px;
     color: #2c384a;
     text-align: center;
+    -webkit-animation: titlemove 1.2s;
+    -o-animation: titlemove 1.2s;
+    animation: titlemove 1.2s;
+    animation-delay: 2.7s;
 }
 
-.title_container h1{
+@keyframes titlemove {
+    from {
+        opacity: 0;
+        margin-left: -300px;
+    }
+
+    to {
+        opacity: 1;
+        margin-left: 404px;
+    }
+}
+
+.title_container h1 {
     font-weight: bold;
     font-size: 60px;
 }
 
-.title_container h4{
+.title_container h4 {
     font-weight: 300;
     font-size: 18px;
     margin-top: 30px;
     color: #79818d;
 }
 
-.title_container input{
+.title_container input {
     margin: 55px 14px 0px 14px;
     font-size: 18px;
     height: 40px;
@@ -66,16 +236,27 @@ nav{
     background: none;
     color: #79818d;
     padding: 0px 16px;
+    transition: all 0.2s;
 }
+
+.title_container input:hover {
+    color: #fff;
+    background: #79818d;
+}
+
+.title_container input:active {
+    transform: scale(1.1)
+}
+
 /*----------------------------ABOUT ME------------------------------*/
 
-.about_me{
+.about_me {
     width: 100%;
     height: 760px;
     box-shadow: 0px -15px 30px -20px #000;
 }
 
-.about_me h2{
+.about_me h2 {
     text-transform: uppercase;
     text-align: center;
     padding: 100px 0px 30px 0px;
@@ -83,14 +264,15 @@ nav{
     font-weight: bold;
     color: #263244;
 }
-.line{
+
+.line {
     height: 4px;
     width: 70px;
-    background:  #d17700;
+    background: #d17700;
     margin-left: 916px;
 }
 
-.photo{
+.photo {
     height: 200px;
     width: 200px;
     border: 0px solid #000;
@@ -100,32 +282,46 @@ nav{
     margin: 60px 850px 22px 850px
 }
 
-.about_me p{
+.about_me p {
     margin: 0px 560px 40px 560px;
     font-size: 16px;
     font-weight: 400;
     color: #3f495a;
 }
 
-.about_me input{
+.about_me input {
     margin: 0px 870px 0px 860px;
     font-size: 16px;
     height: 35px;
     border: 2px solid #79818d;
     border-radius: 6px;
-    background: url(../img/download.png)5% 50%/17px 17px no-repeat ;
+    background: url(../img/download.png)5% 50%/17px 17px no-repeat;
     color: #79818d;
     padding: 0px 12px 0px 35px;
+    transition: 0.2s;
 }
+
+.about_me input:hover {
+    background: #79818d url(../img/download2.png)5% 50%/17px 17px no-repeat;
+
+    border: 2px solid #79818d;
+    color: #fff;
+
+}
+
+.about_me input:active {
+    transform: scale(1.1)
+}
+
 /*---------------------------WHAT CAN I DO-----------------------------*/
 
-.what_can_i_do{
+.what_can_i_do {
     width: 100%;
     height: 520px;
     background: url(../img/w_c_i_d_BG.jpg) center, no-repeat;
 }
 
-.what_can_i_do h2{
+.what_can_i_do h2 {
     text-transform: uppercase;
     text-align: center;
     padding: 100px 0px 30px 0px;
@@ -134,14 +330,15 @@ nav{
     color: #263244;
 }
 
-.info{
+.info {
     width: 1280px;
     height: 160px;
     margin: 100px 400px 80px 400px;
     float: left;
+
 }
 
-.what_can_i_do li{
+.what_can_i_do li {
     padding-top: 85px;
     width: 220px;
     height: 160px;
@@ -151,38 +348,45 @@ nav{
     color: #d17700;
     text-align: center;
     font-weight: bold;
+    transition: all 0.2s;
 }
 
-.what_can_i_do p{
+.what_can_i_do li:hover {
+    transform: scale(1.2);
+}
+
+.what_can_i_do p {
     color: #3f495a;
     font-size: 16px;
     font-weight: 400;
     padding-top: 15px;
 }
 
-#icon_1{
-    background: url(../img/design.png) 50% 10%/ auto no-repeat ;
+#icon_1 {
+    background: url(../img/design.png) 50% 10%/ auto no-repeat;
+
 }
 
-#icon_2{
-    background: url(../img/dev.png) 50% 10%/ auto no-repeat ;
+#icon_2 {
+    background: url(../img/dev.png) 50% 10%/ auto no-repeat;
 }
 
-#icon_3{
-    background: url(../img/optimization.png) 50% 10%/ auto no-repeat ;
+#icon_3 {
+    background: url(../img/optimization.png) 50% 10%/ auto no-repeat;
 }
 
-#icon_4{
-    background: url(../img/marketing.png) 50% 10%/ auto no-repeat ;
+#icon_4 {
+    background: url(../img/marketing.png) 50% 10%/ auto no-repeat;
 }
+
 /*----------------------------------CASES--------------------------------*/
 
-.cases{
+.cases {
     width: 100%;
     height: 1200px;
 }
 
-.cases h2{
+.cases h2 {
     text-transform: uppercase;
     text-align: center;
     padding: 100px 0px 30px 0px;
@@ -191,7 +395,7 @@ nav{
     color: #263244;
 }
 
-#cases_info{
+#cases_info {
     margin: 35px;
     text-align: center;
     font-size: 16px;
@@ -199,14 +403,14 @@ nav{
     color: #3f495a;
 }
 
-.site_photo{
+.site_photo {
     margin: 0px 0px 40px 372px;
     width: 1168px;
     height: 589px;
     background: url(../img/site.jpg) 50% 2%/ auto no-repeat;
 }
 
-#name_box{
+#name_box {
     font-size: 20px;
     text-transform: uppercase;
     font-weight: bold;
@@ -215,25 +419,28 @@ nav{
     width: 200px;
     float: left;
 }
-.cases p{
+
+.cases p {
     font-size: 15px;
     font-weight: normal;
     padding: 15px 0px;
     text-transform: none;
 }
-.project{
+
+.project {
     margin-left: 670px;
     font-size: 20px;
     font-weight: bold;
 }
-.cases h6{
+
+.cases h6 {
     font-size: 16px;
     margin-left: 670px;
     width: 850px;
     height: 120px;
 }
 
-.cases input{
+.cases input {
     font-size: 18px;
     margin-left: 372px;
     height: 44px;
@@ -242,15 +449,30 @@ nav{
     background: #63b5ae;
     color: #fff;
     border-radius: 6px;
+    border: 2px solid #63b5ae;
+    transition: all 0.2s;
+
 }
+
+.cases input:hover {
+    background: none;
+    color: #63b5ae;
+    border: 2px solid #63b5ae;
+
+}
+
+.cases input:active {
+    transform: scale(1.1);
+}
+
 /*---------------------------------------PRICE-----------------------------------------*/
-.price{
+.price {
     width: 100%;
     height: 800px;
 
 }
 
-.price h2{
+.price h2 {
     text-transform: none;
     text-align: center;
     padding: 50px 0px 10px 0px;
@@ -259,7 +481,7 @@ nav{
     color: #102031;
 }
 
-.price h3{
+.price h3 {
     font-size: 24px;
     font-weight: bold;
     color: #102032;
@@ -267,9 +489,10 @@ nav{
     margin: 50px 0px 22px 515px;
 }
 
-.price select{
+.price select {
     width: 890px;
-    padding:18px 30px 18px 25px; /*PADDING справа не двигает галочку*/
+    padding: 18px 30px 18px 25px;
+    /*PADDING справа не двигает галочку*/
     background: #eeeeee;
     color: #747474;
     text-align: left;
@@ -278,42 +501,47 @@ nav{
     margin-left: 515px;
 }
 
-.price option{
+.price option {
     font-size: 15px;
     font-weight: bold;
     text-align: left;
     color: #747474;
 }
 
-.line1{
+.line1 {
     height: 2px;
     width: 890px;
     background: #d2d2d2;
     margin: 36px 0px 0px 515px;
 }
 
-.price h4{
+.price h4 {
     float: left;
     margin: 20px 0px 0px 515px;
     font-size: 18px;
     font-weight: bold;
 }
 
-.price p{
+.price p {
     text-align: right;
     font-size: 27px;
     font-weight: bold;
     margin: 20px 498px 0px 0px
 }
+
 /*-----------------------------------------STATS--------------------------------------*/
 
-.stats{
+.stats {
     width: 100%;
     height: 500px;
-    background: url(../img/statsBG.png);
+    background-image: url(../img/statsBG.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
-.stats h2{
+.stats h2 {
     text-transform: uppercase;
     text-align: center;
     padding: 100px 0px 30px 0px;
@@ -322,14 +550,14 @@ nav{
     color: #263244;
 }
 
-.stats ul{
+.stats ul {
     height: 160px;
     width: 1180px;
     float: left;
     margin: 80px 430px 0px 430px
 }
 
-.stats li{
+.stats li {
     float: left;
     height: 180px;
     width: 185px;
@@ -343,36 +571,37 @@ nav{
     padding-top: 85px;
 }
 
-.stats p{
+.stats p {
     margin-top: 28px;
     font-family: Arial, sans-serif;
     font-size: 15px;
     font-weight: bold;
 }
 
-#icon_5{
+#icon_5 {
     background: url(../img/icon5.png) 50% 5%/ auto no-repeat;
 }
 
-#icon_6{
+#icon_6 {
     background: url(../img/icon6.png) 50% 5%/ auto no-repeat;
 }
 
-#icon_7{
+#icon_7 {
     background: url(../img/icon7.png) 50% 5%/ auto no-repeat;
 }
 
-#icon_8{
+#icon_8 {
     background: url(../img/icon8.png) 50% 5%/ auto no-repeat;
 }
+
 /*------------------------------------REVIEWS-------------------------------------*/
 
-.reviews{
+.reviews {
     height: 600px;
     width: 100%;
 }
 
-.reviews h2{
+.reviews h2 {
     text-transform: uppercase;
     text-align: center;
     padding: 100px 0px 30px 0px;
@@ -381,21 +610,22 @@ nav{
     color: #263244;
 }
 
-.revPhoto{
+.revPhoto {
     width: 110px;
     height: 110px;
     margin: 60px 0px 0px 896px;
     background: url(../img/revPhoto.png) 50% 50%/ auto no-repeat;
 }
 
-.reviews p{
+.reviews p {
     width: 700px;
     text-align: center;
     font-size: 16px;
     font-weight: 400;
     margin: 35px 0px 0px 605px;
 }
-.dot1{
+
+.dot1 {
     float: left;
     width: 10px;
     height: 10px;
@@ -404,7 +634,7 @@ nav{
     margin: 45px 15px 0px 920px
 }
 
-.dot{
+.dot {
     float: left;
     height: 10px;
     width: 10px;
@@ -415,14 +645,13 @@ nav{
 
 /*-----------------------------------MY CONTACT-------------------------------------*/
 
-.my_contacts{
+.my_contacts {
     width: 100%;
     height: 800px;
     background: url(../img/contactBG.jpg) 50%;
-
 }
 
-.my_contacts h2{
+.my_contacts h2 {
     text-transform: uppercase;
     text-align: center;
     padding: 100px 0px 30px 0px;
@@ -431,7 +660,7 @@ nav{
     color: #fff;
 }
 
-.my_contacts p{
+.my_contacts p {
     width: 700px;
     text-align: center;
     font-size: 16px;
@@ -440,13 +669,13 @@ nav{
     color: #fff;
 }
 
-.my_contacts ul{
+.my_contacts ul {
     width: 780px;
     height: 100px;
     margin: 40px 0px 0px 625px;
 }
 
-.my_contacts li{
+.my_contacts li {
     color: #fff;
     padding-top: 45px;
     text-align: center;
@@ -456,19 +685,19 @@ nav{
     margin-right: 100px;
 }
 
-#geo{
+#geo {
     background: url(../img/geo.png) 50% 5%/ auto no-repeat;
 }
 
-#mail{
+#mail {
     background: url(../img/mail.png) 50% 5%/ auto no-repeat;
 }
 
-#phone{
+#phone {
     background: url(../img/phone.png) 50% 5%/ auto no-repeat;
 }
 
-.my_contacts h3{
+.my_contacts h3 {
     font-size: 20px;
     font-weight: bold;
     text-align: center;
@@ -478,10 +707,11 @@ nav{
     margin-bottom: 45px;
 }
 
-.my_contacts form{
+.my_contacts form {
     margin-left: 585px;
 }
-.my_contacts input{
+
+.my_contacts input {
     width: 350px;
     height: 35px;
     padding: 15px 10px;
@@ -491,7 +721,8 @@ nav{
     font-size: 14px;
     font-weight: bold;
 }
-.my_contacts textarea{
+
+.my_contacts textarea {
     color: #5d5d5e;
     height: 100px;
     width: 734px;
@@ -502,18 +733,71 @@ nav{
     font-size: 14px;
     font-weight: bold;
 }
-#submit{
+
+#submit {
     margin: 30px 0px 0px 300px;
     width: 125px;
-    height: 45px;
+    height: 44px;
     border: 2px solid #fff;
     border-radius: 5px;
     background: none;
-    text-align: center;
+    text-transform: uppercase;
+    padding: 0 0 1px;
     color: #fff;
+    transition: all 0.3s;
 }
 
-#copy{
+#submit:hover {
+    background: #fff;
+    color: #14283a;
+}
+
+#submit:active {
+    transform: scale(1.1);
+}
+
+.my_contacts .feedback__1 {
+    margin: 50px auto;
+    padding: 0 0 0 193px;
+}
+
+.my_contacts .feedback {
+    width: 40px;
+    height: 40px;
+    margin-right: 30px;
+    padding-top: 0;
+    transition: 0.2s;
+}
+
+.my_contacts .feedback:active {
+    transform: scale(1.3);
+}
+
+#facebook {
+    background: url(../img/facebook.png) 50% 50%/ auto no-repeat;
+}
+
+#twitter {
+    background: url(../img/twitter.png) 50% 50%/ auto no-repeat;
+}
+
+#ball {
+    background: url(../img/ball.png) 50% 50%/ auto no-repeat;
+}
+
+#cat {
+    background: url(../img/cat.png) 50% 50%/ auto no-repeat;
+}
+
+#instagram {
+    background: url(../img/instagram.png) 50% 50%/ auto no-repeat;
+}
+
+#in {
+    background: url(../img/in.png) 50% 50%/ auto no-repeat;
+}
+
+.copy {
     width: 100%;
     height: 90px;
     background: #14283a;
@@ -523,4 +807,3 @@ nav{
     font-weight: 400;
     line-height: 90px
 }
-

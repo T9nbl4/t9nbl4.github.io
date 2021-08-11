@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <title>MySite</title>
@@ -8,137 +9,188 @@
 </head>
 
 <body>
+
+<!--------------------------------------PRELOADER-------------------------------------->
+    <div class="preloader">
+        <div class="lds-facebook">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
     <header>
         <nav>
-            <div class="logo">Андрей Браун</div>
+            <div class="logo"><a href="#">Андрей Браун</a></div>
             <div class="menu">
                 <ul>
-                    <li>Обо мне</li>
-                    <li>Услуги</li>
-                    <li>Кейсы</li>
-                    <li>Прайс</li>
-                    <li>Отзывы</li>
-                    <li>Контакты</li>
+                    <li><a href="#">Обо мне</a></li>
+                    <li><a href="#">Услуги</a></li>
+                    <li><a href="#">Кейсы</a></li>
+                    <li><a href="#">Прайс</a></li>
+                    <li><a href="#">Отзывы</a></li>
+                    <li><a href="#">Контакты</a></li>
                 </ul>
             </div>
         </nav>
     </header>
 
-    <div class="main">
-        <div class="title_container">
-            <h1>Привет <br> Я Андрей Браун</h1>
-            <h4>Фулл стек веб-разработчик и Android разработчик</h4>
-            <input type="submit" value="Обо мне">
-            <input type="submit" value="Мои работы">
-        </div>
-    </div>
+    <main>
 
-    <div class="about_me">
-        <h2>Обо мне</h2>
-        <div class="line"></div>
-        <div class="photo"></div>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam. Sed commodo nibh ante facilisis bibendum dolor feugiat at. Duis sed dapibus leo nec ornare diam commodo nibh.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam. Sed commodo nibh antefacilisis bibendum dolor feugiat at. Duis sed dapibus leo nec ornare diam commodo nibh.</p>
-        <input type="submit" value="Скачать резюме">
-    </div>
+<!-----------------------------------------MAIN----------------------------------------->
+        <section class="main">
+            <div class="title_container">
+                <h1>Привет <br> Я Андрей Браун</h1>
+                <h4>Фулл стек веб-разработчик и Android-разработчик</h4>
+                <input type="button" value="Обо мне">
+                <input type="button" value="Мои работы">
+            </div>
+        </section>
 
-    <div class="what_can_i_do">
-        <h2>Что я умею</h2>
-        <div class="line"></div>
-        <div class="info">
+<!--------------------------------------ABOUT ME---------------------------------------->
+        <section class="about_me">
+            <h2>Обо мне</h2>
+            <div class="line"></div>
+            <div class="photo"></div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam. Sed commodo nibh ante facilisis bibendum dolor feugiat at. Duis sed dapibus leo nec ornare diam commodo nibh.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam. Sed commodo nibh antefacilisis bibendum dolor feugiat at. Duis sed dapibus leo nec ornare diam commodo nibh.</p>
+            <form action="#">
+                <input type="button" value="Скачать резюме">
+            </form>
+        </section>
+
+<!------------------------------------WHAT CAN I DO------------------------------------->
+        <section class="what_can_i_do">
+            <h2>Что я умею</h2>
+            <div class="line"></div>
+            <div class="info">
+                <ul>
+                    <li id="icon_1">Веб-дизайн <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit, amet?</p>
+                    </li>
+                    <li id="icon_2">Разработка <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid dolorum, harum aut dolore rem minus.</p>
+                    </li>
+                    <li id="icon_3">CEO-Оптимизация <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam eius atque eos saepe quisquam, aspernatur.</p>
+                    </li>
+                    <li id="icon_4">Маркетинг <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque perferendis non, mollitia similique.</p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+<!---------------------------------------CASES------------------------------------------>
+        <section class="cases">
+            <h2>Кейсы</h2>
+            <div class="line"></div>
+            <p id="cases_info">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit vitae repudiandae voluptate consectetur, recusandae atque!</p>
+            <div class="site_photo"></div>
+            <div id="name_box">
+                <div id="name">CLIENT:</div>
+                <p>Какая-то компания</p>
+                <div id="name">WEBSITE:</div>
+                <p>http://www.somedomain.com</p>
+            </div>
+            <div class="project">Название проекта</div>
+            <h6>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam quas necessitatibus, delectus perferendis modi inventore praesentium similique. Facere praesentium totam aliquid inventore neque perferendis commodi soluta a quos tempora. Iure labore, eum ipsam placeat est consequuntur minus soluta nostrum commodi odit ex sit optio. Autem earum magni dolores voluptatem fugiat.</h6>
+            <form action="#" method="post">
+                <input type="button" value="VISIT LIVE SITE">
+            </form>
+        </section>
+
+<!----------------------------------------PRICES---------------------------------------->
+        <section class="price">
+            <h2>Расчет стоимости</h2>
+            <h3>Тип сайта</h3>
+            <select name="site_type" id="list1">
+                <option value="choose">Выберете пункт...</option>
+                <option value="vizitka">Сайт-визитка</option>
+                <option value="market">Интернет-магазин</option>
+                <option value="corp">Корпоративный сайт</option>
+            </select>
+            <br>
+            <h3>Дизайн</h3>
+            <select name="design" id="list2">
+                <option value="choose">Выберете пункт...</option>
+                <option value="interfacer">Интерфейсный</option>
+                <option value="dynamical">Динамический</option>
+                <option value="poligraphical">Полиграфический</option>
+            </select>
+            <br>
+            <h3>Адаптивность</h3>
+            <select name="adaptive" id="list3">
+                <option value="choose">Выберете пункт...</option>
+                <option value="adaptive">Адаптивный</option>
+                <option value="no_adaptive">Не адаптивный</option>
+                <option value="combo">Комбинированный</option>
+            </select>
+            <div class="line1"></div>
+            <h4>Сроки</h4>
+            <p>0</p>
+            <h4>Стоимость</h4>
+            <p>0</p>
+        </section>
+
+<!----------------------------------------STATS----------------------------------------->
+        <section class="stats">
+            <div class="parallax">
+                <h2>Немного статистики</h2>
+                <div class="line"></div>
+                <ul>
+                    <li id="icon_5">120 <p>Счастливых клиентов</p>
+                    </li>
+                    <li id="icon_6">4,600 <p>Часов работы</p>
+                    </li>
+                    <li id="icon_7">230 <p>Проектов завершено</p>
+                    </li>
+                    <li id="icon_8">23 <p>Наград получено</p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+<!----------------------------------------REVIEWS--------------------------------------->
+        <section class="reviews">
+            <h2>Отзывы</h2>
+            <div class="line"></div>
+            <div class="revPhoto"></div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui suscipit, nihil ipsum! Vitae ullam recusandae, eveniet, ea eos, quisquam, error illo nisi assumenda placeat nihil impedit accusamus.</p>
+            <p><b>Михаил</b>, Ген директор ПАО "Газпром".</p>
+            <div class="dot1"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+        </section>
+
+<!--------------------------------------MY CONTACTS------------------------------------->
+        <section class="my_contacts">
+            <h2>Мои контакты</h2>
+            <div class="line"></div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex eius placeat, deserunt fuga impedit.</p>
             <ul>
-             <li id="icon_1">Веб-дизайн <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit, amet?</p></li>
-             <li id="icon_2">Разработка <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid dolorum, harum aut dolore rem minus.</p></li>
-             <li id="icon_3">CEO-Оптимизация <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam eius atque eos saepe quisquam, aspernatur.</p></li>
-             <li id="icon_4">Маркетинг <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque perferendis non, mollitia similique.</p></li>
+                <li id="geo">Санкт-Петербург, Невский проспект 11</li>
+                <li id="mail">info@companyname.com</li>
+                <li id="phone">+7 999 999-99-99</li>
             </ul>
-        </div>
-    </div>
+            <h3>Оставьте мне сообщение</h3>
+            <form action="#">
+                <input type="text" name="text_input" value="" placeholder="Имя">
+                <input type="email" name="email" value="" placeholder="Email"><br>
+                <textarea placeholder="Сообщение"></textarea><br>
+                <input id="submit" type="submit" value="Отправить" required>
+            </form>
+            <ul class="feedback__1">
+                <li id="facebook" class="feedback"><a href="#"></a></li>
+                <li id="twitter" class="feedback"><a href="#"></a></li>
+                <li id="ball" class="feedback"><a href="#"></a></li>
+                <li id="cat" class="feedback"><a href="#"></a></li>
+                <li id="instagram" class="feedback"><a href="#"></a></li>
+                <li id="in" class="feedback"><a href="#"></a></li>
+            </ul>
+        </section>
 
-    <div class="cases">
-        <h2>Кейсы</h2>
-        <div class="line"></div>
-        <p id="cases_info">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit vitae repudiandae voluptate consectetur, recusandae atque!</p>
-        <div class="site_photo"></div>
-        <div id="name_box">
-            <div id="name">CLIENT:</div> <p>Какая-то компания</p>
-            <div id="name">WEBSITE:</div> <p>http://www.somedomain.com</p>
-        </div>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2334.322861000128!2d37.6166893!3d54.1920672!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x41343f80ff00672d%3A0xab3f0aae02998378!2z0JLQtdC70L7QodGA0LXQtNCwINCi0YPQu9Cw!5e0!3m2!1sru!2sru!4v1609159252656!5m2!1sru!2sru" height="350px" width="100%"></iframe>
 
-        <div class="project">Название проекта</div> <h6>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam quas necessitatibus, delectus perferendis modi inventore praesentium similique. Facere praesentium totam aliquid inventore neque perferendis commodi soluta a quos tempora. Iure labore, eum ipsam placeat est consequuntur minus soluta nostrum commodi odit ex sit optio. Autem earum magni dolores voluptatem fugiat.</h6>
-        <input type="submit" value="VISIT LIVE SITE">
-    </div>
-
-    <div class="price">
-        <h2>Расчет стоимости</h2>
-        <h3>Тип сайта</h3>
-        <select name="site_type" id="list1">
-            <option value="choose">Выберете пункт...</option>
-            <option value="vizitka">Сайт-визитка</option>
-            <option value="market">Интернет-магазин</option>
-            <option value="corp">Корпоративный сайт</option>
-        </select>
-        <br>
-        <h3>Дизайн</h3>
-        <select name="design" id="list2">
-            <option value="choose">Выберете пункт...</option>
-            <option value="interfacer">Интерфейсный</option>
-            <option value="dynamical">Динамический</option>
-            <option value="poligraphical">Полиграфический</option>
-        </select>
-        <br>
-        <h3>Адаптивность</h3>
-        <select name="adaptive" id="list3">
-            <option value="choose">Выберете пункт...</option>
-            <option value="adaptive">Адаптивный</option>
-            <option value="no_adaptive">Не адаптивный</option>
-            <option value="combo">Комбинированный</option>
-        </select>
-        <div class="line1"></div>
-        <h4>Сроки</h4> <p>0</p>
-        <h4>Стоимость</h4> <p>0</p>
-    </div>
-
-    <div class="stats">
-        <h2>Немного статистики</h2>
-        <div class="line"></div>
-        <ul>
-            <li id="icon_5">120 <p>Счастливых клиентов</p></li>
-            <li id="icon_6">4,600 <p>Часов работы</p></li>
-            <li id="icon_7">230 <p>Проектов завершено</p></li>
-            <li id="icon_8">23 <p>Наград получено</p></li>
-        </ul>
-    </div>
-
-    <div class="reviews">
-        <h2>Отзывы</h2>
-        <div class="line"></div>
-        <div class="revPhoto"></div>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui suscipit, nihil ipsum! Vitae ullam recusandae, eveniet, ea eos, quisquam, error illo nisi assumenda placeat nihil impedit accusamus.</p>
-        <p><b>Михаил</b>, Ген директор ПАО "Газпром".</p>
-        <div class="dot1"></div>
-        <div class="dot"></div>
-        <div class="dot"></div>
-    </div>
-
-    <div class="my_contacts">
-        <h2>Мои контакты</h2>
-        <div class="line"></div>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex eius placeat, deserunt fuga impedit.</p>
-        <ul>
-            <li id="geo">Санкт-Петербург, Невский проспект 11</li>
-            <li id="mail">info@companyname.com</li>
-            <li id="phone">+7 999 999-99-99</li>
-        </ul>
-        <h3>Оставьте мне сообщение</h3>
-        <form action="#">
-            <input type="text" name="text_input" value="" placeholder="Имя">
-            <input type="text" name="text_input" value="" placeholder="Email"><br>
-            <textarea placeholder="Сообщение"></textarea><br>
-            <input id="submit" type="submit" value="Отправить">
-        </form>
-    </div>
-    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2334.322861000128!2d37.6166893!3d54.1920672!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x41343f80ff00672d%3A0xab3f0aae02998378!2z0JLQtdC70L7QodGA0LXQtNCwINCi0YPQu9Cw!5e0!3m2!1sru!2sru!4v1609159252656!5m2!1sru!2sru" height="350px" width="100%"></iframe>
-    <div id="copy">&copy; Copyright © 2021 Андрей Браун. Design by Web.</div>
+        <footer>
+            <div class="copy">&copy; Copyright © 2021 Андрей Браун. Design by Web.</div>
+        </footer>
+    </main>
 </body>
+
 </html>
