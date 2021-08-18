@@ -5,184 +5,332 @@
     <meta charset="UTF-8">
     <title>MySite</title>
     <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body>
-
-<!--------------------------------------PRELOADER-------------------------------------->
-    <div class="preloader">
-        <div class="lds-facebook">
-            <div></div>
-            <div></div>
-            <div></div>
+    <!--------------------------------------PRELOADER-------------------------------------->
+    <div class="preloader ">
+        <div class="container h-100">
+            <div class="row h-100">
+                <div class="col-12 align-items-center d-flex justify-content-center">
+                    <div class="lds-facebook ">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                </div>
+            </div>
         </div>
+
     </div>
     <header>
         <nav>
-            <div class="logo"><a href="#">Андрей Браун</a></div>
-            <div class="menu">
-                <ul>
-                    <li><a href="#">Обо мне</a></li>
-                    <li><a href="#">Услуги</a></li>
-                    <li><a href="#">Кейсы</a></li>
-                    <li><a href="#">Прайс</a></li>
-                    <li><a href="#">Отзывы</a></li>
-                    <li><a href="#">Контакты</a></li>
-                </ul>
+            <div class="container">
+                <div class="row">
+                    <div class="col-xxl-2 col-lg-3 col-8">
+                        <div class="logo"><a href="#">Андрей Браун</a></div>
+                    </div>
+                    <div class="px-0 col-xxl-6 offset-xxl-4 col-xl-7 offset-xl-2 col-lg-8 offset-lg-1 d-none d-lg-block">
+                        <div class="menu">
+                            <ul>
+                                <li><a href="#">Обо мне</a></li>
+                                <li><a href="#">Услуги</a></li>
+                                <li><a href="#">Кейсы</a></li>
+                                <li><a href="#">Прайс</a></li>
+                                <li><a href="#">Отзывы</a></li>
+                                <li><a href="#">Контакты</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!--------ПЕРЕДЕЛАТЬ БУРГЕР!--------------->
+                    <div class="col-4 d-flex d-lg-none flex-column justify-content-center align-items-end">
+                        <div class="dropdown">
+                            <a class="btn btn-outline-light dropdown-toggle white-btn" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                                МЕНЮ
+                            </a>
+
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                <li><a class="dropdown-item" href="#">Обо мне</a></li>
+                                <li><a class="dropdown-item" href="#">Услуги</a></li>
+                                <li><a class="dropdown-item" href="#">Кейсы</a></li>
+                                <li><a class="dropdown-item" href="#">Прайс</a></li>
+                                <li><a class="dropdown-item" href="#">Отзывы</a></li>
+                                <li><a class="dropdown-item" href="#">Контакты</a></li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
             </div>
         </nav>
     </header>
 
     <main>
-
-<!-----------------------------------------MAIN----------------------------------------->
+        <!---------------------------------------MAIN------------------------------------------->
         <section class="main">
-            <div class="title_container">
-                <h1>Привет <br> Я Андрей Браун</h1>
-                <h4>Фулл стек веб-разработчик и Android-разработчик</h4>
-                <input type="button" value="Обо мне">
-                <input type="button" value="Мои работы">
+            <div class="container h-100">
+                <div class="row align-items-center h-100 pt-5">
+                    <div class="col-lg-6 mt-5 pt-5">
+                        <div class="title_container">
+                            <h1>Привет <br> Я Андрей Браун</h1>
+                            <h4>Фулл стек веб-разработчик и Android-разработчик</h4>
+                            <input type="button" value="Обо мне">
+                            <input type="button" value="Мои работы">
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
-<!--------------------------------------ABOUT ME---------------------------------------->
+        <!--------------------------------------ABOUT ME---------------------------------------->
         <section class="about_me">
-            <h2>Обо мне</h2>
-            <div class="line"></div>
-            <div class="photo"></div>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam. Sed commodo nibh ante facilisis bibendum dolor feugiat at. Duis sed dapibus leo nec ornare diam commodo nibh.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam. Sed commodo nibh antefacilisis bibendum dolor feugiat at. Duis sed dapibus leo nec ornare diam commodo nibh.</p>
-            <form action="#">
-                <input type="button" value="Скачать резюме">
-            </form>
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 mx-auto">
+                        <h2>Обо мне</h2>
+                        <div class="line"></div>
+                        <div class="photo"></div>
+                    </div>
+                    <div class="col-md-8 col-sm-10 col-12 mx-auto">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam. Sed commodo nibh ante facilisis bibendum dolor feugiat at. Duis sed dapibus leo nec ornare diam commodo nibh.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam. Sed commodo nibh antefacilisis bibendum dolor feugiat at. Duis sed dapibus leo nec ornare diam commodo nibh.</p>
+                        <form action="#" class="d-flex justify-content-center ">
+                            <input type="button" value="Скачать резюме">
+                        </form>
+                    </div>
+                </div>
+            </div>
         </section>
 
-<!------------------------------------WHAT CAN I DO------------------------------------->
+        <!------------------------------------WHAT CAN I DO------------------------------------->
         <section class="what_can_i_do">
-            <h2>Что я умею</h2>
-            <div class="line"></div>
-            <div class="info">
-                <ul>
-                    <li id="icon_1">Веб-дизайн <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit, amet?</p>
-                    </li>
-                    <li id="icon_2">Разработка <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid dolorum, harum aut dolore rem minus.</p>
-                    </li>
-                    <li id="icon_3">CEO-Оптимизация <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam eius atque eos saepe quisquam, aspernatur.</p>
-                    </li>
-                    <li id="icon_4">Маркетинг <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque perferendis non, mollitia similique.</p>
-                    </li>
-                </ul>
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 mx-auto">
+                        <h2>Что я умею</h2>
+                        <div class="line"></div>
+                    </div>
+                    <div class="row mx-auto px-xl-5 gx-xl-5 gx-lg-3 gx-0">
+                        <div class="col-lg-3 col-sm-6 col-12 icon">
+                            <div class="icon_1"></div>Веб-дизайн <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit, amet?</p>
+                        </div>
+
+                        <div class="col-lg-3 col-sm-6 col-12 icon">
+                            <div class="icon_2"></div>Разработка <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit, amet?</p>
+                        </div>
+
+                        <div class="col-lg-3 col-sm-6 col-12 icon">
+                            <div class="icon_3"></div>CEO-Оптимизация <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit, amet?</p>
+                        </div>
+
+                        <div class="col-lg-3 col-sm-6 col-12 icon">
+                            <div class="icon_4"></div>Маркетинг <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit, amet?</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
-<!---------------------------------------CASES------------------------------------------>
+        <!---------------------------------------CASES------------------------------------------>
         <section class="cases">
-            <h2>Кейсы</h2>
-            <div class="line"></div>
-            <p id="cases_info">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit vitae repudiandae voluptate consectetur, recusandae atque!</p>
-            <div class="site_photo"></div>
-            <div id="name_box">
-                <div id="name">CLIENT:</div>
-                <p>Какая-то компания</p>
-                <div id="name">WEBSITE:</div>
-                <p>http://www.somedomain.com</p>
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 mx-auto">
+                        <h2>Кейсы</h2>
+                        <div class="line"></div>
+                        <p id="cases_info">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit vitae repudiandae voluptate consectetur, recusandae atque!</p>
+                    </div>
+                    <div class="col-12 my-5 mx-auto">
+                        <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="img/site.jpg" class="d-block w-100" alt="...">
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Предыдущий</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Следующий</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-3 col-12">
+                        <div id="name_box">
+                            <div id="name">CLIENT:</div>
+                            <p>Какая-то компания</p>
+                            <div id="name">WEBSITE:</div>
+                            <p>http://www.somedomain.com</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-9  col-md-9 offset-lg-1">
+                        <div class="project">Название проекта</div>
+                        <h6>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam quas necessitatibus, delectus perferendis modi inventore praesentium similique. Facere praesentium totam aliquid inventore neque perferendis commodi soluta a quos tempora. Iure labore, eum ipsam placeat est consequuntur minus soluta nostrum commodi odit ex sit optio. Autem earum magni dolores voluptatem fugiat.</h6>
+                    </div>
+                    <div class="col-md-2 d-md-block d-flex justify-content-center">
+                        <form action="#" method="post">
+                            <input type="button" value="Перейти на сайт">
+                        </form>
+                    </div>
+                </div>
             </div>
-            <div class="project">Название проекта</div>
-            <h6>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam quas necessitatibus, delectus perferendis modi inventore praesentium similique. Facere praesentium totam aliquid inventore neque perferendis commodi soluta a quos tempora. Iure labore, eum ipsam placeat est consequuntur minus soluta nostrum commodi odit ex sit optio. Autem earum magni dolores voluptatem fugiat.</h6>
-            <form action="#" method="post">
-                <input type="button" value="VISIT LIVE SITE">
-            </form>
         </section>
 
-<!----------------------------------------PRICES---------------------------------------->
+        <!---------------------------------------PRICE------------------------------------------>
         <section class="price">
-            <h2>Расчет стоимости</h2>
-            <h3>Тип сайта</h3>
-            <select name="site_type" id="list1">
-                <option value="choose">Выберете пункт...</option>
-                <option value="vizitka">Сайт-визитка</option>
-                <option value="market">Интернет-магазин</option>
-                <option value="corp">Корпоративный сайт</option>
-            </select>
-            <br>
-            <h3>Дизайн</h3>
-            <select name="design" id="list2">
-                <option value="choose">Выберете пункт...</option>
-                <option value="interfacer">Интерфейсный</option>
-                <option value="dynamical">Динамический</option>
-                <option value="poligraphical">Полиграфический</option>
-            </select>
-            <br>
-            <h3>Адаптивность</h3>
-            <select name="adaptive" id="list3">
-                <option value="choose">Выберете пункт...</option>
-                <option value="adaptive">Адаптивный</option>
-                <option value="no_adaptive">Не адаптивный</option>
-                <option value="combo">Комбинированный</option>
-            </select>
-            <div class="line1"></div>
-            <h4>Сроки</h4>
-            <p>0</p>
-            <h4>Стоимость</h4>
-            <p>0</p>
-        </section>
-
-<!----------------------------------------STATS----------------------------------------->
-        <section class="stats">
-            <div class="parallax">
-                <h2>Немного статистики</h2>
-                <div class="line"></div>
-                <ul>
-                    <li id="icon_5">120 <p>Счастливых клиентов</p>
-                    </li>
-                    <li id="icon_6">4,600 <p>Часов работы</p>
-                    </li>
-                    <li id="icon_7">230 <p>Проектов завершено</p>
-                    </li>
-                    <li id="icon_8">23 <p>Наград получено</p>
-                    </li>
-                </ul>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-1 col-0"></div>
+                    <div class="col-lg-10 col-12 cost">
+                        <h2>Расчет стоимости</h2>
+                        <h3>Тип сайта</h3>
+                        <select class="form-select mx-auto" aria-label="Default select example " id="list1">
+                            <option selected>Выберете пункт...</option>
+                            <option value="vizitka">Сайт-визитка</option>
+                            <option value="market">Интернет-магазин</option>
+                            <option value="corp">Корпоративный сайт</option>
+                        </select>
+                        <h3>Дизайн</h3>
+                        <select class="form-select mx-auto" aria-label="Default select example">
+                            <option selected>Выберете пункт...</option>
+                            <option value="interfacer">Интерфейсный</option>
+                            <option value="dynamical">Динамический</option>
+                            <option value="poligraphical">Полиграфический</option>
+                        </select>
+                        <h3>Адаптивность</h3>
+                        <select class="form-select mx-auto" aria-label="Default select example">
+                            <option selected>Выберете пункт...</option>
+                            <option value="adaptive">Адаптивный</option>
+                            <option value="no_adaptive">Не адаптивный</option>
+                            <option value="combo">Комбинированный</option>
+                        </select>
+                        <div class="line1"></div>
+                        <h4>Сроки</h4>
+                        <p>0</p>
+                        <h4>Стоимость</h4>
+                        <p>0</p>
+                        <form action="#" class="d-flex justify-content-center">
+                            <input type="button" value="Отправить заявку">
+                        </form>
+                    </div>
+                    <div class="col-lg-1 col-0"></div>
+                </div>
             </div>
         </section>
 
-<!----------------------------------------REVIEWS--------------------------------------->
-        <section class="reviews">
-            <h2>Отзывы</h2>
-            <div class="line"></div>
-            <div class="revPhoto"></div>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui suscipit, nihil ipsum! Vitae ullam recusandae, eveniet, ea eos, quisquam, error illo nisi assumenda placeat nihil impedit accusamus.</p>
-            <p><b>Михаил</b>, Ген директор ПАО "Газпром".</p>
-            <div class="dot1"></div>
-            <div class="dot"></div>
-            <div class="dot"></div>
+        <!---------------------------------------STATS------------------------------------------>
+        <section class="stats">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 mx-auto">
+                        <h2>Немного статистики</h2>
+                        <div class="line"></div>
+                    </div>
+                    <div class="row mx-auto px-xl-5 gx-xl-5 gx-lg-3 gx-0">
+                        <div class="col-lg-3 col-6 icon1">
+                            <div class="icon_5"></div>120 <p>Счастливых клиентов</p>
+                        </div>
+
+                        <div class="col-lg-3 col-6 icon1">
+                            <div class="icon_6"></div>4,600 <p>Часов работы</p>
+                        </div>
+
+                        <div class="col-lg-3 col-6 icon1">
+                            <div class="icon_7"></div>230 <p>Проектов завершено</p>
+                        </div>
+
+                        <div class="col-lg-3 col-6 icon1">
+                            <div class="icon_8"></div>23 <p>Наград получено</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
 
-<!--------------------------------------MY CONTACTS------------------------------------->
+        <!--------------------------------------REVIEWS----------------------------------------->
+        <section class="reviews">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 mx-auto">
+                        <h2>Отзывы</h2>
+                        <div class="line"></div>
+                        <div class="revPhoto"></div>
+                    </div>
+                    <div class="col-lg-8 col-12 mx-auto">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui suscipit, nihil ipsum! Vitae ullam recusandae, eveniet, ea eos, quisquam, error illo nisi assumenda placeat nihil impedit accusamus.</p>
+                        <p><b>Михаил</b>, Ген директор ПАО "Газпром".</p>
+                        <div class="dot"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!------------------------------------MY CONTACTS--------------------------------------->
         <section class="my_contacts">
-            <h2>Мои контакты</h2>
-            <div class="line"></div>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex eius placeat, deserunt fuga impedit.</p>
-            <ul>
-                <li id="geo">Санкт-Петербург, Невский проспект 11</li>
-                <li id="mail">info@companyname.com</li>
-                <li id="phone">+7 999 999-99-99</li>
-            </ul>
-            <h3>Оставьте мне сообщение</h3>
-            <form action="#">
-                <input type="text" name="text_input" value="" placeholder="Имя">
-                <input type="email" name="email" value="" placeholder="Email"><br>
-                <textarea placeholder="Сообщение"></textarea><br>
-                <input id="submit" type="submit" value="Отправить" required>
-            </form>
-            <ul class="feedback__1">
-                <li id="facebook" class="feedback"><a href="#"></a></li>
-                <li id="twitter" class="feedback"><a href="#"></a></li>
-                <li id="ball" class="feedback"><a href="#"></a></li>
-                <li id="cat" class="feedback"><a href="#"></a></li>
-                <li id="instagram" class="feedback"><a href="#"></a></li>
-                <li id="in" class="feedback"><a href="#"></a></li>
-            </ul>
+            <div class="container">
+                <div class="row ">
+                    <div class="col-12 mx-auto">
+                        <h2>Мои контакты</h2>
+                        <div class="line"></div>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex eius placeat, deserunt fuga impedit.</p>
+                    </div>
+                    <div class="col-xl-2 col-0"></div>
+                    <div class="col-xl-2 col-sm-3 col-5 info">
+                        <div class="mail"></div>
+                        <p>info@companyname.com</p>
+                    </div>
+                    <div class="col-xl-1 col-sm-1 col-2"></div>
+                    <div class="col-xl-2 col-sm-4 col-5 info">
+                        <div class="phone"></div>
+                        <p>+7 999 999-99-99</p>
+
+                    </div>
+                    <div class="col-xl-1 col-sm-1"></div>
+                    <div class="col-xl-2 col-sm-3 col-12 mx-auto info">
+                        <div class="geo"></div>
+                        <p>Санкт-Петербург, Невский проспект 11</p>
+                    </div>
+                    <div class="col-xl-2 col-0"></div>
+                    <div class="col-12 mx-auto">
+                        <h3>Оставьте мне сообщение</h3>
+                    </div>
+                    <form action="#">
+                        <div class="row">
+                            <div class="col-lg-2"></div>
+                            <div class="col-lg-4 col-6">
+                                <input type="text" name="text_input" value="" placeholder="Имя">
+                            </div>
+                            <div class="col-lg-4 col-6">
+                                <input type="email" name="email" value="" placeholder="Email">
+                            </div>
+                            <div class="col-lg-2"></div>
+                            <div class="col-lg-2"></div>
+                            <div class="col-lg-8 col-12">
+                                <textarea placeholder="Сообщение"></textarea>
+                            </div>
+                            <div class="col-lg-2"></div>
+                            <div class="col-12 d-flex justify-content-center">
+                                <input id="submit" type="submit" value="Отправить" required>
+                            </div>
+                        </div>
+                        <div class="col-xl-5 col-md-8 col-12 mx-auto d-flex justify-content-center">
+                            <ul class="feedback__1 ">
+                                <li id="facebook" class="feedback"><a href="#"></a></li>
+                                <li id="twitter" class="feedback"><a href="#"></a></li>
+                                <li id="ball" class="feedback"><a href="#"></a></li>
+                                <li id="cat" class="feedback"><a href="#"></a></li>
+                                <li id="instagram" class="feedback"><a href="#"></a></li>
+                                <li id="in" class="feedback"><a href="#"></a></li>
+                            </ul>
+                        </div>
+                    </form>
+                </div>
+            </div>
         </section>
 
         <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2334.322861000128!2d37.6166893!3d54.1920672!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x41343f80ff00672d%3A0xab3f0aae02998378!2z0JLQtdC70L7QodGA0LXQtNCwINCi0YPQu9Cw!5e0!3m2!1sru!2sru!4v1609159252656!5m2!1sru!2sru" height="350px" width="100%"></iframe>
@@ -191,6 +339,12 @@
             <div class="copy">&copy; Copyright © 2021 Андрей Браун. Design by Web.</div>
         </footer>
     </main>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
+
+<!--
+
+ -->
