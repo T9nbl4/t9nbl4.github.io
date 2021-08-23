@@ -206,7 +206,7 @@
                         <select class="form-select mx-auto" aria-label="Default select example">
                             <option selected>Выберете пункт...</option>
                             <option value="adaptive">Адаптивный</option>
-                            <option value="no_adaptive">Не адаптивный</option>
+                            <option value="no_adaptive">Жесткий</option>
                             <option value="combo">Комбинированный</option>
                         </select>
                         <div class="line1"></div>
@@ -318,15 +318,19 @@
                                 <input id="submit" type="submit" value="Отправить" required>
                             </div>
                         </div>
-                        <div class="col-xl-5 col-md-8 col-12 mx-auto d-flex justify-content-center">
-                            <ul class="feedback__1 ">
-                                <li id="facebook" class="feedback"><a href="#"></a></li>
-                                <li id="twitter" class="feedback"><a href="#"></a></li>
-                                <li id="ball" class="feedback"><a href="#"></a></li>
-                                <li id="cat" class="feedback"><a href="#"></a></li>
-                                <li id="instagram" class="feedback"><a href="#"></a></li>
-                                <li id="in" class="feedback"><a href="#"></a></li>
-                            </ul>
+                        <div class="row mx-auto">
+                            <div class="col-lg-3 col-md-2"></div>
+                            <div class="col-lg-3 col-md-4 col-sm-6 d-flex justify-content-sm-end justify-content-center px-0 gx-0 ">
+                                <div class="feedback" id="facebook"><a href="#"></a></div>
+                                <div class="feedback" id="twitter"><a href="#"></a></div>
+                                <div class="feedback" id="ball"><a href="#"></a></div>
+                            </div>
+                            <div class="col-lg-3 col-md-4 col-sm-6 d-flex justify-content-sm-start justify-content-center px-0 gx-0">
+                                <div class="feedback" id="cat"><a href="#"></a></div>
+                                <div class="feedback" id="instagram"><a href="#"></a></div>
+                                <div class="feedback" id="in"><a href="#"></a></div>
+                            </div>
+                            <div class="col-lg-3 col-md-2"></div>
                         </div>
                     </form>
                 </div>
@@ -341,6 +345,7 @@
     </main>
 
     <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/prompt.js"></script>
 </body>
 
 </html>
